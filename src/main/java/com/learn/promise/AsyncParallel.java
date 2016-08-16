@@ -73,18 +73,3 @@ public class AsyncParallel {
 		THREAD_POOL.shutdown();
 	}
 }
-
-/*
-	private static <T> CompletableFuture<List<T>> sequence(List<CompletableFuture<T>> futures) {
-		CompletableFuture<Void> allDoneFuture =
-				CompletableFuture.allOf(futures.toArray(new CompletableFuture[futures.size()]));
-		return allDoneFuture.thenApply(v -> {
-
-					return null;
-				}
-//				futures.stream().
-//						map(future -> future.join()).
-//						collect(Collectors.<T>toList())
-		);
-	}
-*/
